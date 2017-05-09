@@ -13,12 +13,10 @@
     '$rootScope',
     '$q',
     'utils',
-    'INDUSTRIES',
-    'COUNTRIES',
     '$scope'
   ];
 
-  function ConfirmationCtrl($translate, signup, auth, $location, $rootScope, $q, utils, INDUSTRIES, COUNTRIES, $scope) {
+  function ConfirmationCtrl($translate, signup, auth, $location, $rootScope, $q, utils, $scope) {
     var vm = this;
     vm.regexDomain = "(?=^.{4,253}$)(^((?!-)[a-zA-Z0-9-]{0,62}[a-zA-Z0-9]\\.)+[a-zA-Z]{2,63}$)";
     vm.regexPhoneNumber = "^\\+?([0-9][\\s-]?(\\([0-9]+\\))*)+[0-9]$";
@@ -38,8 +36,17 @@
 
     function fillList() {
       var lang = $translate.use();
-      vm.industryList = INDUSTRIES.map(function(val){ return { code: val.code, name: val[lang] }; });
-      vm.countryList = COUNTRIES.map(function(val){ return { code: val.code, name: val[lang] }; });
+      signup.getIndustries().then(function(ret) {
+		    vm.industryList = ret.data.map(function(val){
+			  return { code: val.code, name: val[lang] }; 
+			})
+		});
+	
+      signup.getCountries().then(function(ret) {
+		    vm.countryList = ret.data.map(function(val){
+			  return { code: val.code, name: val[lang] }; 
+			})
+		})
     }
 
     function activate() {
