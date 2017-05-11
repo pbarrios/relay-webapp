@@ -204,6 +204,7 @@
   "action_adding_domain": "Activando un Dominio",
   "action_setting_default_domain": "Activando un dominio predeterminado",
   "action_deleting_domain": "Borrando un Dominio",
+  "action_getting_resource" : "Obteniendo recurso de la web",
   "reset_password_title": "Restablece tu contraseña",
   "reset_password_subtitle": "¡Crea tu nueva contraseña a continuación!",
   "reset_password_placeholder": "Escribe tu nueva contraseña",
@@ -254,5 +255,6 @@
   "select_choose_industry":"Selecciona tu industria",
   "domain_manager_dkim_spf_status_th": "SPF & DKIM",
   "domain_manager_status_error_tooltip": "El DKIM no está configurado aún.",
-  "domain_manager_status_warning_tooltip": "El SPF no está configurado aún."
+  "domain_manager_status_warning_tooltip": "El SPF no está configurado aún.",
+  "select_choose_status": "Selecciona estado"
 };

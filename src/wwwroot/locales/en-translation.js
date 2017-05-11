@@ -192,6 +192,7 @@
   "action_adding_domain": "Adding a Domain",
   "action_setting_default_domain": "Setting a default Domain",
   "action_deleting_domain": "Deleting a Domain",
+  "action_getting_resource" : "Getting web resource",
   "reset_password_title": "Reset your Password",
   "reset_password_subtitle": "Create your new password below!",
   "reset_password_placeholder": "Type your new password",
@@ -240,5 +241,6 @@
   "select_choose_industry":"Select your industry",
   "domain_manager_dkim_spf_status_th": "SPF & DKIM",
   "domain_manager_status_error_tooltip": "The DKIM is not configured yet.",
-  "domain_manager_status_warning_tooltip": "The SPF is not configured yet."
+  "domain_manager_status_warning_tooltip": "The SPF is not configured yet.",
+  "select_choose_status": "Select status"
 };
